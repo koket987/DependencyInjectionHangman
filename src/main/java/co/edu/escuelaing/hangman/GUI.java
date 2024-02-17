@@ -45,11 +45,14 @@ public class GUI {
     private GameOverController gameoverController;
     private HighScoreController highScoreController;
 
+    private GameScore gameScore;
+
     @Autowired
     public GUI(HangmanFactoryMethod factoryMethod) {
         this.language = factoryMethod.createLanguage();
         this.dictionary = factoryMethod.createDictionary();
         this.hangmanPanel = factoryMethod.createHangmanPanel();
+        this.gameScore = factoryMethod.createGameScore();
     }
 
     /* Example of second constructor
@@ -85,7 +88,7 @@ public class GUI {
                 mainFrameController
         );
 
-        GameModel gameModel = new GameModel(dictionary);
+        GameModel gameModel = new  GameModel(dictionary, gameScore);
         gameController = new GameController(
                 new GamePanel(gameModel.getCharacterSet(), hangmanPanel, language),
                 gameModel,

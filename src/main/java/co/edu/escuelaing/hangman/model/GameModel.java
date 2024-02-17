@@ -14,6 +14,7 @@ package co.edu.escuelaing.hangman.model;
 
 import co.edu.escuelaing.hangman.model.dictionary.HangmanDictionary;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -27,7 +28,7 @@ public class GameModel {
     private int incorrectCount;
     private int correctCount;
     private LocalDateTime dateTime;
-    private int gameScore;
+    private int gameScorePoints;
     private int[] lettersUsed;
 
 
@@ -37,16 +38,20 @@ public class GameModel {
     private String randomWord;
     private char[] randomWordCharArray;
 
+    private GameScore gameScore;
+
 
     @Autowired
-    public GameModel(HangmanDictionary dictionary) {
+    public GameModel(HangmanDictionary dictionary,GameScore gameScore) {
         //this.dictionary = new EnglishDictionaryDataSource();
         this.dictionary = dictionary;
+        this.gameScore = gameScore;
         randomWord = selectRandomWord();
         randomWordCharArray = randomWord.toCharArray();
         incorrectCount = 0;
         correctCount = 0;
-        gameScore = 100;
+        gameScorePoints = gameScore.calculateScore(correctCount,incorrectCount);
+
 
     }
 
@@ -57,7 +62,7 @@ public class GameModel {
         randomWordCharArray = randomWord.toCharArray();
         incorrectCount = 0;
         correctCount = 0;
-        gameScore = 100;
+        gameScorePoints = gameScore.calculateScore(correctCount,incorrectCount);
     }
 
     //setDateTime
@@ -79,10 +84,11 @@ public class GameModel {
         }
         if (positions.size() == 0) {
             incorrectCount++;
-            gameScore -= 10;
+
         } else {
             correctCount += positions.size();
         }
+        gameScorePoints = gameScore.calculateScore(correctCount,incorrectCount);
         return positions;
 
     }
@@ -97,13 +103,13 @@ public class GameModel {
     //getScore
     //purpose: returns current score value
     public int getScore() {
-        return gameScore;
+        return gameScorePoints;
     }
 
     //setScore
     //purpose: sets score value to points
     public void setScore(int score) {
-        this.gameScore = score;
+        this.gameScorePoints = gameScore.calculateScore(correctCount,incorrectCount);
     }
 
     //name: selectRandomWord()
@@ -129,13 +135,13 @@ public class GameModel {
     //method: getGameScore
     //purpose: return current score
     public int getGameScore() {
-        return gameScore;
+        return gameScorePoints;
     }
 
     //method: setGameScore
     //purpose: set current game score
     public void setGameScore(int gameScore) {
-        this.gameScore = gameScore;
+        this.gameScorePoints = gameScore;
     }
 
     //method: getWordLength
