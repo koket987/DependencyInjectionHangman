@@ -2,7 +2,7 @@
 
 ### Ciclo de Vida de Desarrollo de Software
 
-### Desarrollo Dirigido por Pruebas + DIP + DI + Contenedores Livianos
+### Desarrollo Dirigido por Pruebas + DIP + DI
 
 Para este taller se va a trabajar sobre el juego del ahorcado.
 
@@ -39,7 +39,7 @@ principio de inversión de dependencias:
 
 ### Parte I
 
-1. Clone el proyecto (no lo descargue!).
+1. Haga un fork del proyecto (no lo descargue directamente!).
 
 2. A partir del código existente, implemente sólo los cascarones del
    modelo antes indicado.
@@ -56,8 +56,7 @@ principio de inversión de dependencias:
     git commit -m "especificación métodos"
     ```
 
-5. Actualice el archivo `pom.xml` e incluya las dependencias para la ultima versión de JUnit y la versión del compilador
-   de Java a la versión 8.
+5. Actualice el archivo `pom.xml` e incluya las dependencias para la ultima versión de JUnit.
 
 6. Teniendo en cuenta dichas especificaciones, en la clase donde se
    implementarán las pruebas (GameScoreTest), en los
@@ -90,31 +89,19 @@ principio de inversión de dependencias:
     el comando de GIT para enviar los cambios:
 
     ```sh
-    git push <URL Repositorio>	
+    git push origin main
     ```
 
 ### Parte II
 
 Actualmente se utiliza el patrón FactoryMethod
 que desacopla la creación de los objetos para diseñar un juego
-de ahorcado (revisar createGUIUsingFactoryMethod en SwingProject, el
+de ahorcado (revisar setup.factoryMethod, el
 constructor de la clase GUI y HangmanFactoryMethod).
-
-En este taller se va a utilizar un contenedor liviano ([GoogleGuice](https://github.com/google/guice)) el cual soporta
-la inyección de las dependencias.
 
 1. Utilizando el HangmanFactoryMethod (MétodoFabrica) incluya el
    OriginalScore a la configuración.
 
-Incorpore el Contenedor Liviano Guice dentro del proyecto:
-
-* Revise las dependencias necesarias en el `pom.xml`.
-* Modifique la inyección de dependencias utilizando guice en lugar del
-  método fábrica.
-* Configure la aplicación de manera que desde el programa SwingProject
-  NO SE CONSTRUYA el Score directamente, sino a través de Guice, asi
-  mismo como las otras dependencias que se están inyectando mediante
-  la fabrica.
 * Mediante la configuración de la Inyección de
   Dependencias se pueda cambiar el comportamiento del mismo, por
   ejemplo:
@@ -123,5 +110,3 @@ Incorpore el Contenedor Liviano Guice dentro del proyecto:
     * Utilizar el idioma francés.
     * Utilizar el diccionario francés.
     * etc...
-* Para lo anterior, [puede basarse en el ejemplo dado como
-  referencia](https://github.com/PDSW-ECI/LightweighContainers_DepenendecyInjectionIntro-WordProcessor).
