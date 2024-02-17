@@ -11,8 +11,11 @@
  ****************************************************************/
 package co.edu.escuelaing.hangman.view;
 
+import org.springframework.stereotype.Component;
+
 import java.awt.*;
 
+@Component("hangmanStickmanPanel")
 public class HangmanStickmanPanel extends HangmanPanel {
     int incorrectCount;
 

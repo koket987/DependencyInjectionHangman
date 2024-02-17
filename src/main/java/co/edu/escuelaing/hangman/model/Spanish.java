@@ -5,9 +5,12 @@
  */
 package co.edu.escuelaing.hangman.model;
 
+import org.springframework.stereotype.Component;
+
 /**
  * @author 2106913
  */
+@Component("spanishLanguage")
 public class Spanish implements Language {
 
     @Override

@@ -16,7 +16,7 @@ import javax.swing.border.BevelBorder;
 import javax.swing.border.Border;
 import java.awt.*;
 
-import static co.edu.escuelaing.hangman.SwingProject.CONTRIBUTORS;
+import static co.edu.escuelaing.hangman.SpringBootSwingApplication.CONTRIBUTORS;
 
 public class HighScorePanel extends JPanel {
     //Declaring the font,bold and size of button text

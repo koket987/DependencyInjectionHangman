@@ -5,6 +5,8 @@
  */
 package co.edu.escuelaing.hangman.model.dictionary;
 
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 import java.util.List;
 

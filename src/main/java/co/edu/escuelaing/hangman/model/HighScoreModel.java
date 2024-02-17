@@ -14,7 +14,7 @@ package co.edu.escuelaing.hangman.model;
 
 import java.awt.*;
 
-import static co.edu.escuelaing.hangman.SwingProject.CONTRIBUTORS;
+import static co.edu.escuelaing.hangman.SpringBootSwingApplication.CONTRIBUTORS;
 
 public class HighScoreModel {
     private String highScoreTitle;

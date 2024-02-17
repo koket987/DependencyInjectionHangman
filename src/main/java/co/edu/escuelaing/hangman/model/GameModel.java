@@ -13,6 +13,7 @@
 package co.edu.escuelaing.hangman.model;
 
 import co.edu.escuelaing.hangman.model.dictionary.HangmanDictionary;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -37,6 +38,7 @@ public class GameModel {
     private char[] randomWordCharArray;
 
 
+    @Autowired
     public GameModel(HangmanDictionary dictionary) {
         //this.dictionary = new EnglishDictionaryDataSource();
         this.dictionary = dictionary;

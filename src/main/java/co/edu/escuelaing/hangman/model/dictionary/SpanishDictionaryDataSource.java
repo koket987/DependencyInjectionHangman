@@ -5,12 +5,15 @@
  */
 package co.edu.escuelaing.hangman.model.dictionary;
 
+import org.springframework.stereotype.Component;
+
 import java.util.Arrays;
 import java.util.List;
 
 /**
  * @author 2106913
  */
+@Component("spanishDictionary")
 public class SpanishDictionaryDataSource extends HangmanDictionary {
 
     static private String words[] = {

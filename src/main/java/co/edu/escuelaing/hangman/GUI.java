@@ -6,13 +6,16 @@ import co.edu.escuelaing.hangman.model.dictionary.HangmanDictionary;
 import co.edu.escuelaing.hangman.setup.factoryMethod.HangmanFactoryMethod;
 import co.edu.escuelaing.hangman.view.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
 import java.awt.*;
 
-import static co.edu.escuelaing.hangman.SwingProject.CONTRIBUTORS;
-import static co.edu.escuelaing.hangman.SwingProject.PROJECT_NAME;
+import static co.edu.escuelaing.hangman.SpringBootSwingApplication.CONTRIBUTORS;
+import static co.edu.escuelaing.hangman.SpringBootSwingApplication.PROJECT_NAME;
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
+@Component
 public class GUI {
 
     public static final String SCORE_NUMBER[] = {
@@ -42,7 +45,6 @@ public class GUI {
     private GameOverController gameoverController;
     private HighScoreController highScoreController;
 
-    // Use Factory method
     @Autowired
     public GUI(HangmanFactoryMethod factoryMethod) {
         this.language = factoryMethod.createLanguage();
@@ -50,13 +52,17 @@ public class GUI {
         this.hangmanPanel = factoryMethod.createHangmanPanel();
     }
 
+    /* Example of second constructor
     @Autowired
-    // Use Guice constructor
-    public GUI(Language language, HangmanDictionary dictionary, HangmanPanel hangmanPanel) {
+    public GUI(
+            @Qualifier("englishLanguage") Language language,
+            @Qualifier("englishDictionary") HangmanDictionary dictionary,
+            @Qualifier("hangmanStickmanPanel") HangmanPanel hangmanPanel
+    ) {
         this.language = language;
         this.dictionary = dictionary;
         this.hangmanPanel = hangmanPanel;
-    }
+    }*/
 
     // method: setup
     // purpose: Create the various panels (game screens) for our game
