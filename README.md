@@ -41,6 +41,10 @@ principio de inversión de dependencias:
 
 1. Haga un fork del proyecto (no lo descargue directamente!).
 
+![image](https://github.com/koket987/LAB03-CVDS/assets/97971883/42bd3eba-eb71-4cf8-8e15-4f5ee920ef78)
+
+![image](https://github.com/koket987/DependencyInjectionHangman/assets/97971883/bd6426d7-5492-442f-8441-ecfaca6b617a)
+
 2. A partir del código existente, implemente sólo los cascarones del
    modelo antes indicado.
 
@@ -78,14 +82,18 @@ principio de inversión de dependencias:
    Asegúrese que todas las pruebas unitarias creadas en los puntos anteriores
    se ejecutan satisfactoriamente.
 
-10. Al finalizar haga un nuevo commit:
+
+   ![image](https://github.com/koket987/LAB03-CVDS/assets/97971883/6fae5b40-5895-44ad-a397-cb69b9495cb9)
+   
+
+11. Al finalizar haga un nuevo commit:
 
     ```sh		
     git add .			
     git commit -m "implementación del modelo"
     ```
 
-11. Para sincronizar el avance en el respositorio y NO PERDER el trabajo, use
+12. Para sincronizar el avance en el respositorio y NO PERDER el trabajo, use
     el comando de GIT para enviar los cambios:
 
     ```sh
