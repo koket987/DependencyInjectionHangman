@@ -82,6 +82,18 @@ principio de inversión de dependencias:
    las tres variantes de GameScore, e identifique
    condiciones de frontera.
 
+![MicrosoftTeams-image (24)](https://github.com/PDSW-ECI/DependencyInjectionHangman/assets/97971883/9673f1a8-c6ac-47cf-800f-72b4f5bbf839)
+
+![MicrosoftTeams-image (25)](https://github.com/PDSW-ECI/DependencyInjectionHangman/assets/97971883/56e87bc6-6821-4e6c-bca4-ab0d3ee647a7)
+
+![MicrosoftTeams-image (26)](https://github.com/PDSW-ECI/DependencyInjectionHangman/assets/97971883/0dc8420b-fd08-44f1-a73d-062b7e8c56d7)
+
+![MicrosoftTeams-image (27)](https://github.com/PDSW-ECI/DependencyInjectionHangman/assets/97971883/f2991fb9-baf6-465e-83fe-3280d1ee43ff)
+
+![MicrosoftTeams-image (28)](https://github.com/PDSW-ECI/DependencyInjectionHangman/assets/97971883/4e041599-8e88-46d6-9bec-8737251e17b8)
+
+![MicrosoftTeams-image (29)](https://github.com/PDSW-ECI/DependencyInjectionHangman/assets/97971883/d41b723a-eb53-489c-9219-c0ff1084a966)
+
 8. Para cada clase de equivalencia y condición de frontera, implemente
    una prueba utilizando JUnit.
 
@@ -114,6 +126,7 @@ principio de inversión de dependencias:
     ```sh
     git push origin main
     ```
+![MicrosoftTeams-image (30)](https://github.com/PDSW-ECI/DependencyInjectionHangman/assets/97971883/3dfe94f7-166e-4015-8942-9f07bc5f2830)
 
 ### Parte II
 
@@ -133,3 +146,6 @@ constructor de la clase GUI y HangmanFactoryMethod).
     * Utilizar el idioma francés.
     * Utilizar el diccionario francés.
     * etc...
+
+![MicrosoftTeams-image (31)](https://github.com/PDSW-ECI/DependencyInjectionHangman/assets/97971883/c334d611-31b9-43e6-a458-90fb01b0929b)
+
