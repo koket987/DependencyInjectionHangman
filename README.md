@@ -53,32 +53,47 @@ principio de inversión de dependencias:
    generales dadas anteriormente. Recuerde tener en cuenta: @pre,
    @pos, @param, @throws.
 
-4. Haga commit de lo realizado hasta ahora. Desde la terminal:
+
+   Original Score
+
+   ![MicrosoftTeams-image (20)](https://github.com/PDSW-ECI/DependencyInjectionHangman/assets/97971883/5c56afe9-adf1-4078-bf43-ce5410d4144b)
+
+   Bonus Score
+
+   ![MicrosoftTeams-image (21)](https://github.com/PDSW-ECI/DependencyInjectionHangman/assets/97971883/629ba7ac-114a-4473-a4bc-8fe95083067f)
+
+   Power Score
+
+   ![MicrosoftTeams-image (22)](https://github.com/PDSW-ECI/DependencyInjectionHangman/assets/97971883/a059eb8b-c624-4eb6-bca4-e56e1ab58a61)
+
+
+5. Haga commit de lo realizado hasta ahora. Desde la terminal:
 
     ```sh		
     git add .			
     git commit -m "especificación métodos"
     ```
 
-5. Actualice el archivo `pom.xml` e incluya las dependencias para la ultima versión de JUnit.
+6. Actualice el archivo `pom.xml` e incluya las dependencias para la ultima versión de JUnit.
 
-6. Teniendo en cuenta dichas especificaciones, en la clase donde se
+7. Teniendo en cuenta dichas especificaciones, en la clase donde se
    implementarán las pruebas (GameScoreTest), en los
    comentarios iniciales, especifique las clases de equivalencia para
    las tres variantes de GameScore, e identifique
    condiciones de frontera.
 
-7. Para cada clase de equivalencia y condición de frontera, implemente
+8. Para cada clase de equivalencia y condición de frontera, implemente
    una prueba utilizando JUnit.
 
-8. Haga commit de lo realizado hasta ahora. Desde la terminal:
+9. Haga commit de lo realizado hasta ahora. Desde la terminal:
 
     ```sh		
     git add .			
     git commit -m "implementación pruebas"
     ```
+![MicrosoftTeams-image (23)](https://github.com/PDSW-ECI/DependencyInjectionHangman/assets/97971883/7c724aa4-2c89-480a-a48c-a47cb58635e9)
 
-9. Realice la implementación de los 'cascarones' realizados anteriormente.
+10. Realice la implementación de los 'cascarones' realizados anteriormente.
    Asegúrese que todas las pruebas unitarias creadas en los puntos anteriores
    se ejecutan satisfactoriamente.
 
